@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#666"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/monsterName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="怪物"
+        android:textColor="#FFB700"
+        app:layout_constraintBottom_toBottomOf="@+id/monsterImg"
+        app:layout_constraintEnd_toStartOf="@+id/monsterImg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.39" />
+
+    <TextView
+        android:id="@+id/monsterLife"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="生命值：1500    攻击力：50"
+        android:textColor="#FFB700"
+        app:layout_constraintEnd_toEndOf="@+id/monsterName"
+        app:layout_constraintStart_toStartOf="@+id/monsterName"
+        app:layout_constraintTop_toBottomOf="@+id/monsterName" />
+
+    <ImageView
+        android:id="@+id/monsterImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#0ff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher_foreground" />
+
+    <ImageView
+        android:id="@+id/myImg"
+        android:layout_width="454.5px"
+        android:layout_height="343.5px"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myBlood"
+        app:srcCompat="@mipmap/peike" />
+
+    <TextView
+        android:id="@+id/myName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="佩可莉姆"
+        android:textColor="#0f0"
+        app:layout_constraintBottom_toBottomOf="@+id/myImg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/myImg"
+        app:layout_constraintTop_toTopOf="@+id/myImg"
+        app:layout_constraintVertical_bias="0.36" />
+
+    <TextView
+        android:id="@+id/myLife"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="生命值：1000    攻击力：100"
+        android:textColor="#0f0"
+        app:layout_constraintEnd_toEndOf="@+id/myName"
+        app:layout_constraintStart_toStartOf="@+id/myName"
+        app:layout_constraintTop_toBottomOf="@+id/myName" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0099ff"
+        android:paddingVertical="10dp"
+        android:text="战斗数据"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myImg" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+        <LinearLayout
+            android:id="@+id/fightDate"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/cBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#0099ff"
+        android:text="继续游戏"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VS"
+        android:textColor="#fff"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/myImg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/monsterBlood"
+        app:layout_constraintVertical_bias="0.04000002" />
+
+    <ProgressBar
+        android:id="@+id/monsterBlood"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="100"
+        android:progressTint="#0f0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/monsterImg" />
+
+    <ProgressBar
+        android:id="@+id/myBlood"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="100"
+        android:progressTint="#0f0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
